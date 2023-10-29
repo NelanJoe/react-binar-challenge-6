@@ -54,7 +54,9 @@ export const register = (name, email, password, navigate) => async (dispatch) =>
       return;
     }
 
-    alert(error?.message);
+    toast.error(`${error?.message}`, {
+      duration: 3000,
+    });
   }
 };
 
