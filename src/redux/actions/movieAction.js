@@ -81,6 +81,7 @@ export const getDetail = (id) => async (dispatch, getState) => {
     });
 
     const data = response?.data;
+
     dispatch(setDetail(data?.data));
     dispatch(setGenre(data?.data?.genres));
   } catch (err) {
