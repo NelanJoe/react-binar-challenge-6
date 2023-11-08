@@ -79,8 +79,8 @@ export const getDetail = (id) => async (dispatch, getState) => {
         Authorization: `Bearer ${token}`,
       },
     });
+
     const data = response?.data;
-    console.log(data);
     dispatch(setDetail(data?.data));
     dispatch(setGenre(data?.data?.genres));
   } catch (err) {
